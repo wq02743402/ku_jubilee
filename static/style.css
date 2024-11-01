@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* 文字置中 */
+    margin: 0;
+    padding: 0;
+    background-color: black; /* 背景顏色設為黑色 */
+    color: black; /* 文字顏色設為黑色 */
+}
+
+.background-image {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 使背景佔滿整個視窗 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直置中 */
+    align-items: center; /* 水平置中 */
+}
+
+h1 {
+    font-weight: bold; /* 標題粗體 */
+    color: black; /* 文字顏色 */
+    background-color: #FFBF3F; /* 背景色為黃底 */
+    padding: 20px; /* 添加內邊距 */
+    border-radius: 5px; /* 添加圓角 */
+    font-size: 3em; /* 字體放大 */
+}
+
+input[type="text"] {
+    margin-top: 20px;
+    padding: 15px; /* 增加內邊距 */
+    width: 80%;
+    border: none;
+    border-radius: 5px; /* 圓角 */
+    font-weight: bold; /* 輸入框文字粗體 */
+    font-size: 1.5em; /* 字體放大 */
+}
+
+button {
+    background-color: #FFBF3F; /* 按鈕背景色 */
+    color: black; /* 按鈕文字顏色 */
+    padding: 15px 30px; /* 增加內邊距 */
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold; /* 按鈕文字粗體 */
+    border-radius: 5px; /* 圓角 */
+    font-size: 1.5em; /* 字體放大 */
+}
+
+/* 設定背景圖片根據裝置類型 */
+@media (min-width: 1024px) { /* 電腦 */
+    .background-image {
+        background-image: url('../static/1.svg');
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) { /* 平板 */
+    .background-image {
+        background-image: url('../static/2.svg');
+    }
+}
+
+@media (max-width: 767px) { /* 手機 */
+    .background-image {
+        background-image: url('../static/3.svg');
+    }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九宮格活動查詢</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-image">
+        <h1>輸入您的電子信箱</h1>
+        <form action="/check_email" method="POST">
+            <input type="text" name="email" required placeholder="電子信箱">
+            <button type="submit">查詢</button>
+        </form>
+    </div>
+</body>
+</html>

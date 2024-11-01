@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查詢結果</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-image">
+        <h1>查詢結果</h1>
+        {% if user_data.empty %}
+            <h2>電子信箱不正確，請再試一次。</h2>
+            <form action="/" method="POST">
+                <button type="submit" class="return-button">返回</button>
+            </form>
+        {% else %}
+            <h2>完成數量: {{ completed_count }}</h2>
+            <!-- 這裡可以添加九宮格的展示 -->
+        {% endif %}
+    </div>
+</body>
+</html>
